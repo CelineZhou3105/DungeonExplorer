@@ -9,10 +9,11 @@
 ## Launch Instructions
 
 1. Download the repository
-2. Open repository with a suitable IDE (IntelliJ)
-3. Add json.jar and junit.jar from the lib folder into project folder
-4. Launch main class in DungeonApplication.java
-5. Have fun :)
+2. Open repository as a JavaFX project with a suitable IDE (IntelliJ)
+3. Add json.jar from the lib folder into project folder
+4. Add junit and jupiter to classpath 
+5. Launch main class in DungeonApplication.java
+6. Have fun :)
 
 ## Basic Levels
 Here are two of the basic level designs in this game.
