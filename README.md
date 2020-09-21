@@ -11,7 +11,7 @@
 To launch through the jar file:
 1. Download the DungeonExplorer.jar file
 2. Launch the jar file with "java -jar DungeonExplorer.jar" through the command line/terminal
-3. If the jar file throws errors, launch the game through the alternate option down below
+3. If the jar file throws errors, launch the game through the alternative option down below
 
 To launch through IDE:
 1. Download the repository
