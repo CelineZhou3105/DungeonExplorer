@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="squares" gridLinesVisible="true" onKeyPressed="#handleKeyPress" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane>
+         <center>
+            <GridPane fx:id="dungeonGrid" BorderPane.alignment="CENTER">
+            </GridPane>
+         </center>
+         <bottom>
+            <BorderPane fx:id="inventoryPane" prefHeight="77.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+               <center>
+                  <GridPane fx:id="inventoryGrid" alignment="CENTER" prefHeight="36.0" BorderPane.alignment="CENTER">
+                  </GridPane>
+               </center>
+               <top>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Inventory" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <BorderPane prefHeight="53.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <Label text="Move with the arrow keys." textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <Label text="Press ESC to pause." textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font>
+                        </Label>
+                     </center>
+                     <bottom>
+                        <Label text="Hover over entities to see their info." textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font>
+                        </Label>
+                     </bottom>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </bottom>
+         <top>
+            <BorderPane prefHeight="54.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+               <center>
+                  <GridPane fx:id="goalGrid" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" BorderPane.alignment="CENTER">
+            </GridPane>
+               </center>
+               <top>
+                  <Label text="Goals" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Label fx:id="prohibitedLabel" textAlignment="CENTER" textFill="#f52020" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+               </bottom>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

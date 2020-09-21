@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="776.0" styleClass="bg" stylesheets="@dungeonStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="exitGame" layoutX="336.0" layoutY="288.0" mnemonicParsing="false" onAction="#closeGame" prefHeight="40.0" prefWidth="102.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="Exit Game" />
+      <Button fx:id="startButton" layoutX="337.0" layoutY="142.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="102.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="Start" />
+      <Button fx:id="howToPlay" layoutX="336.0" layoutY="217.0" mnemonicParsing="false" onAction="#instructions" prefHeight="40.0" prefWidth="102.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="How to Play" />
+      <Text fill="WHITE" layoutX="275.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dungeon Explorer" textAlignment="CENTER" wrappingWidth="226.8603515625">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="human" fitHeight="33.0" fitWidth="33.0" layoutX="263.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ImageView fx:id="enemy" fitHeight="43.0" fitWidth="33.0" layoutX="315.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="potion" fitHeight="33.0" fitWidth="33.0" layoutX="371.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="sword" fitHeight="33.0" fitWidth="33.0" layoutX="428.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="treasure" fitHeight="33.0" fitWidth="33.0" layoutX="485.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="itemDesc" layoutX="19.0" layoutY="20.0" prefHeight="550.0" prefWidth="736.0">
+         <children>
+            <GridPane fx:id="items" layoutX="20.0" layoutY="34.0" prefHeight="483.0" prefWidth="697.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.3333740234375" minWidth="10.0" prefWidth="54.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.9999694824219" minWidth="10.0" prefWidth="56.66668701171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="590.6666463216146" minWidth="10.0" prefWidth="586.6666463216146" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="44.666666666666664" minHeight="4.6666717529296875" prefHeight="44.666666666666664" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="48.44445546468099" minHeight="4.6666717529296875" prefHeight="41.666666666666664" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="57.888875325520814" minHeight="0.0" prefHeight="36.000010172526046" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="69.66667175292967" minHeight="0.0" prefHeight="36.000005086263" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="99.9999974568685" minHeight="6.666661580403655" prefHeight="42.333338419596345" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="125.999994913737" minHeight="0.0" prefHeight="39.33333333333334" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="125.999994913737" minHeight="0.0" prefHeight="37.33332316080728" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="154.66668701171875" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="122.00001017252606" minHeight="0.0" prefHeight="29.333333333333314" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="132.6666768391927" minHeight="0.0" prefHeight="32.666666666666686" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="129.00000000000006" minHeight="0.0" prefHeight="36.333353678385436" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="144.77777099609375" minHeight="10.0" prefHeight="40.99998982747394" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="144.77777099609375" minHeight="10.0" prefHeight="52.666666666666686" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Can be moved up, down, left, and right using the arrow keys into adjacent squares." wrappingWidth="550.1895879507065" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player " wrappingWidth="72.60678100585938" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wall" wrappingWidth="37.12695121765137" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blocks the movement of the player, enemies and boulders." GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="playerDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Exit" wrappingWidth="33.88412284851074" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="If the player goes through it the puzzle is complete." GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Treasure" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Can be collected by the player." GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Door" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Exists in conjunction with a single key that can open it. If the player holds the key, they can open the door by moving through it. Once open it remains so. " wrappingWidth="567.1416015625" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Key" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Can be picked up by the player when they move into the square containing it. The player can carry only one key at a time, and only one door has a lock that fits the key. " wrappingWidth="562.834228515625" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Boulder" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Acts like a wall in most cases. The only difference being that it can be pushed by the player into adjacent squares. The player is only strong enough to push one boulder at a time." wrappingWidth="566.0986938476562" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Floor Switch" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Switches behave like empty squares, so other entities can appear on top of them. When a boulder is pushed onto a floor switch, it is triggered. Pushing a boulder off the floor switch untriggers it." wrappingWidth="435.6751403808594" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Portal" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Teleports entities to a corresponding portal." GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Constantly moves toward the player, stopping if it cannot move any closer. The player dies upon collision with an enemy." wrappingWidth="571.033447265625" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sword" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This can be picked up the player and used to kill enemies. Only one sword can be carried at once. Each sword is only capable of 5 hits and disappears after that. One hit of the sword is sufficient to destroy any enemy." wrappingWidth="566.3175659179688" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="If the player picks this up they become invincible to enemies. Colliding with an enemy should result in their immediate destruction. Because of this, all enemies will run away from the player when they are invincible. The effect of the potion only lasts a limited time." wrappingWidth="573.5037841796875" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Invincibility potion" wrappingWidth="68.36004638671875" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="wallDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                  <ImageView fx:id="exitDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                  <ImageView fx:id="treasureDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                  <ImageView fx:id="doorDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
+                  <ImageView fx:id="boulderDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />
+                  <ImageView fx:id="keyDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
+                  <ImageView fx:id="floorSwitchDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8" />
+                  <ImageView fx:id="portalDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9" />
+                  <ImageView fx:id="enemyDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="10" />
+                  <ImageView fx:id="swordDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="11" />
+                  <ImageView fx:id="potionDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="12" />
+                  <ImageView fx:id="houndDesc" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="13" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hound" wrappingWidth="68.36004638671875" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Walks between two places on the map. If the player is unarmed and collides into the hound, they will die. " wrappingWidth="573.5037841796875" GridPane.columnIndex="2" GridPane.rowIndex="13">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+            <Button fx:id="gotIt" layoutX="312.0" layoutY="508.0" mnemonicParsing="false" onAction="#closeInstructions" prefHeight="26.0" prefWidth="102.0" text="Got it!" />
+            <Text layoutX="48.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have been placed into a very dangerous dungeon - complete the required quests to finish the level!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</Pane>

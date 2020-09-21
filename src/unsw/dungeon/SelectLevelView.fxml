@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bg" stylesheets="@dungeonStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="215.0" layoutY="85.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a level">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="maze" alignment="CENTER" layoutX="76.0" layoutY="163.0" mnemonicParsing="false" onAction="#selectMazeLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="1 - Ever gotten lost before?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="191.0" layoutY="163.0" mnemonicParsing="false" onAction="#selectBoulderLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="2-Let's switch it up" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="309.0" layoutY="163.0" mnemonicParsing="false" onAction="#selectHoundsLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="3 - Good..? Doggy?" textAlignment="CENTER" wrapText="true" />
+      <Button alignment="CENTER" layoutX="424.0" layoutY="163.0" mnemonicParsing="false" onAction="#selectEnemyLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="4 - Decisions, decisions.." textAlignment="CENTER" wrapText="true" />
+      <ImageView fx:id="mazeImg" fitHeight="47.0" fitWidth="42.0" layoutX="101.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="boulderImg" fitHeight="47.0" fitWidth="42.0" layoutX="220.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="houndImg" fitHeight="47.0" fitWidth="42.0" layoutX="334.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="enemyImg" fitHeight="47.0" fitWidth="42.0" layoutX="449.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="back" layoutX="22.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Button alignment="CENTER" layoutX="81.0" layoutY="291.0" mnemonicParsing="false" onAction="#selectPortalLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="5 - The order of things" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <ImageView fx:id="portalImg" fitHeight="47.0" fitWidth="42.0" layoutX="106.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+      <Button alignment="CENTER" layoutX="200.0" layoutY="291.0" mnemonicParsing="false" onAction="#selectPotionLevel" prefHeight="47.0" prefWidth="101.0" styleClass="buttons" stylesheets="@dungeonStyle.css" text="6 - Ready, set, kill!" textAlignment="CENTER" wrapText="true" />
+      <ImageView fx:id="potionImg" fitHeight="47.0" fitWidth="42.0" layoutX="225.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
