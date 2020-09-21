@@ -18,9 +18,11 @@
 Here are two of the basic level designs in this game.
 
 A simple maze.
+
 ![Maze][maze]
 
 A simple boulder puzzle.
+
 ![Boulders][boulders]
 
 [maze]:          examples/maze.png
